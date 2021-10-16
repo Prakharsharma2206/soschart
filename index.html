@@ -1,0 +1,603 @@
+<!doctype html>
+
+<html class="no-js" lang="">
+
+
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title></title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <meta property="og:title" content="">
+
+    <meta property="og:type" content="">
+
+    <meta property="og:url" content="">
+
+    <meta property="og:image" content="">
+
+
+
+    <link rel="manifest" href="site.webmanifest">
+
+
+
+    <!-- Place favicon.ico in the root directory -->
+
+
+
+
+
+    <meta name="theme-color" content="#fafafa">
+
+</head>
+<style>
+    span{
+        cursor: pointer;
+    }
+    p{
+        cursor: pointer;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+
+<script>
+    function defaultfunc(){
+        document.getElementById("Average").style.display= "none";
+        document.getElementById("myChart").style.display= "none";
+        document.getElementById("myChart1").style.display= "none";
+        document.getElementById("myChart2").style.display= "none";
+        document.getElementById("myChart3").style.display= "none";
+        document.getElementById("myChart4").style.display= "none";
+
+    }
+
+    function funcavg(){
+        defaultfunc();
+        document.getElementById("Average").style.display= "block";
+    }
+    function func1(){
+        defaultfunc();
+        document.getElementById("myChart").style.display= "block";
+    }
+
+    function func2(){
+        defaultfunc();
+        document.getElementById("myChart1").style.display= "block";
+    }
+
+    function func3(){
+        defaultfunc();
+        document.getElementById("myChart2").style.display= "block";
+    }
+
+    function func4(){
+        defaultfunc();
+        document.getElementById("myChart3").style.display= "block";
+    }
+
+    function func5(){
+        defaultfunc();
+        document.getElementById("myChart4").style.display= "block";
+    }
+</script>
+
+<body>
+
+
+    <div class="dropdown">
+        <span>Mouse over me</span>
+        <div class="dropdown-content">
+            <p onclick="funcavg()">Average Report</p>
+            <p onclick="func1()">Question 1</p>
+            <p onclick="func2()">Question 2</p>
+            <p onclick="func3()">Question 3</p>
+            <p onclick="func4()">Question 4</p>
+            <p onclick="func5()">Question 5</p>
+        </div>
+    </div>
+
+    <div >
+
+        <canvas id="myChart" style="display: none;" ></canvas>
+
+    </div>
+
+    <div>
+
+        <canvas id="myChart1" style="display: none;"></canvas>
+
+    </div>
+
+    <div>
+
+        <canvas id="myChart2" style="display: none;"></canvas>
+
+    </div>
+
+    <div>
+
+        <canvas id="myChart3" style="display: none;"></canvas>
+
+    </div>
+
+    <div>
+
+        <canvas id="myChart4" style="display: none;"></canvas>
+
+    </div>
+
+
+    
+
+    <div>
+
+        <canvas id="Average" ></canvas>
+
+    </div>
+
+
+    <!-- Add your site or application content here -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+    <script>
+
+
+
+        const labels1 = [
+
+            'Monday',
+
+            'Tuesday',
+
+            'Wednesday',
+
+            'Thursday',
+
+            'Friday',
+
+            'Saturday',
+
+            'Sunday',
+
+        ];
+
+        const data1 = {
+
+            labels: labels1,
+
+            datasets: [{
+
+                label: 'Daily report everyday',
+
+                backgroundColor: 'rgb(0, 0, 0)',
+
+                borderColor: 'rgb(0, 0, 0)',
+
+                data: [0, 10, 5, 2, 20, 30, 45, 50],
+
+            }]
+
+        };
+
+
+
+        const config1 = {
+
+            type: 'line',
+
+            data: data1,
+
+            options: {}
+
+        };
+
+
+
+        // === include 'setup' then 'config' above ===
+
+
+
+        var myChart = new Chart(
+
+            document.getElementById('myChart'),
+            config1
+        );
+
+    </script>
+
+
+
+
+
+<script>
+
+
+
+    const labels = [
+    'Monday',
+
+            'Tuesday',
+
+            'Wednesday',
+
+            'Thursday',
+
+            'Friday',
+
+            'Saturday',
+
+            'Sunday',
+
+    ];
+
+    const data = {
+
+        labels: labels,
+
+        datasets: [{
+
+            label: 'Daily report everyday',
+
+            backgroundColor: 'rgb(0, 0, 0)',
+
+            borderColor: 'rgb(0, 0, 0)',
+
+            data: [20, 15, 45, 23, 40, 10, 5, 50],
+
+        }]
+
+    };
+
+
+
+    const config = {
+
+        type: 'line',
+
+        data: data,
+
+        options: {}
+
+    };
+
+
+
+    // === include 'setup' then 'config' above ===
+
+
+
+    var myChart = new Chart(
+
+        document.getElementById('myChart1'),
+        config
+    );
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+    const labels2 = [
+    'Monday',
+
+            'Tuesday',
+
+            'Wednesday',
+
+            'Thursday',
+
+            'Friday',
+
+            'Saturday',
+
+            'Sunday',
+
+    ];
+
+    const data2 = {
+
+        labels: labels2,
+
+        datasets: [{
+
+            label: 'Daily report everyday',
+
+            backgroundColor: 'rgb(0, 0, 0)',
+
+            borderColor: 'rgb(0, 0, 0)',
+
+            data: [0, 10, 5, 2, 20, 30, 45, 50],
+
+        }]
+
+    };
+
+
+
+    const config2 = {
+
+        type: 'line',
+
+        data: data2,
+
+        options: {}
+
+    };
+
+
+
+    // === include 'setup' then 'config' above ===
+
+
+
+    var myChart = new Chart(
+
+        document.getElementById('myChart2'),
+        config2
+    );
+
+</script>
+
+
+
+
+
+
+<script>
+
+
+
+    const labels3 = [
+    'Monday',
+
+            'Tuesday',
+
+            'Wednesday',
+
+            'Thursday',
+
+            'Friday',
+
+            'Saturday',
+
+            'Sunday',
+
+    ];
+
+    const data3 = {
+
+        labels: labels3,
+
+        datasets: [{
+
+            label: 'Daily report everyday',
+
+            backgroundColor: 'rgb(0, 0, 0)',
+
+            borderColor: 'rgb(0, 0, 0)',
+
+            data: [20, 15, 45, 23, 40, 10, 5, 50],
+
+        }]
+
+    };
+
+
+
+    const config3 = {
+
+        type: 'line',
+
+        data: data3,
+
+        options: {}
+
+    };
+
+
+
+    // === include 'setup' then 'config' above ===
+
+
+
+    var myChart = new Chart(
+
+        document.getElementById('myChart3'),
+        config3
+    );
+
+</script>
+
+
+
+
+<script>
+
+
+
+    const labels4 = [
+
+        'Monday',
+
+        'Tuesday',
+
+        'Wednesday',
+
+        'Thursday',
+
+        'Friday',
+
+        'Saturday',
+
+        'Sunday',
+
+    ];
+
+    const data4 = {
+
+        labels: labels4,
+
+        datasets: [{
+
+            label: 'Daily report everyday',
+
+            backgroundColor: 'rgb(0, 0, 0)',
+
+            borderColor: 'rgb(0, 0, 0)',
+
+            data: [0, 10, 5, 2, 20, 30, 45, 50],
+
+        }]
+
+    };
+
+
+
+    const config4 = {
+
+        type: 'line',
+
+        data: data4,
+
+        options: {}
+
+    };
+
+
+
+    // === include 'setup' then 'config' above ===
+
+
+
+    var myChart = new Chart(
+
+        document.getElementById('myChart4'),
+        config4
+    );
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+    const labels5 = [
+
+        'Monday',
+
+        'Tuesday',
+
+        'Wednesday',
+
+        'Thursday',
+
+        'Friday',
+
+        'Saturday',
+
+        'Sunday',
+
+    ];
+
+    const data5 = {
+
+        labels: labels5,
+
+        datasets: [{
+
+            label: 'Average Daily Data',
+
+            backgroundColor: 'rgb(0, 0, 0)',
+
+            borderColor: 'rgb(0, 0, 0)',
+
+            data: [30, 30, 25, 20, 40, 45, 35, 53],
+
+        }]
+
+    };
+
+
+
+    const config5 = {
+
+        type: 'line',
+
+        data: data5,
+
+        options: {}
+
+    };
+
+
+
+    // === include 'setup' then 'config' above ===
+
+
+
+    var myChart = new Chart(
+
+        document.getElementById('Average'),
+        config5
+    );
+
+</script>
+
+
+
+
+</body>
+
+
+
+</html>
